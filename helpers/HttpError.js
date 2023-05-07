@@ -18,8 +18,8 @@ module.exports = class HttpError extends Error {
     return new HttpError(403, "Forbidden.");
   }
 
-  static NotFoundError() {
-    return new HttpError(404, "Not Found.");
+  static NotFoundError(message = "Not Found.") {
+    return new HttpError(404, message);
   }
   static ConflictError(message = "Conflict.") {
     return new HttpError(409, message);
